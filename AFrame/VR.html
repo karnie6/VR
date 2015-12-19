@@ -1,1 +1,55 @@
-VR.html
+<html>
+<script src="https://aframe.io/releases/latest/aframe.min.js"></script>
+<body>
+ <a-scene>
+
+      <a-sky src="skies.png" rotation="0 -130 0" position="0 1.6 0"></a-sky>
+  <a-cube position="10 0 0" width="2" depth="2" height="2"></a-cube> 
+<!-- <a-model src="tree.dae" scale="1 1 1"></a-model> -->
+<!-- <a-cylinder radius="2" open-ended="true"></a-cylinder> -->
+ <a-video src="GF6CY3.mp4" width="4" height="3" autoplay="true">
+<a-animation attribute="position" from="5 2.8 -6" to="7.25 2.8 -6" begin="1000" dur="1000"></a-animation>
+</a-video> 
+
+
+      <a-entity id="model" position="0 0 -2">
+        <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000" easing="linear" repeat="inifite"></a-animation>
+        <a-model position="-.35 0 .55" rotation="0 -20 0" scale="1.5 1.5 1.5" src="man.dae"></a-model>
+      <!--  <a-image src="../_images/radial-shadow-2.png" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image> -->
+      </a-entity>
+
+<a-entity position="0 0 -4" scale="1 1 1">
+
+        <!-- Animations rotate and position the group for a bit of extra visual flair -->
+        <a-animation attribute="position" to="0 4.5 -4" dur="2000" fill="forwards"></a-animation>
+        <a-animation attribute="rotation" from="0 60 0" to="0 30 0" dur="2500" fill="forwards"></a-animation>
+
+        <!-- Translate and position are used to set the "hinge" of each board to it's top edge  -->
+        <a-cube width="6" height="1" depth=".05" translate="0 -0.5 0" color="#F16745">
+          <a-animation attribute="rotation" from="-90 0 0" to="0 0 0" dur="1000" fill="forwards"></a-animation>
+
+          <a-cube position="0 -1 0" width="6" height="1" depth=".05" translate="0 -0.5 0" color="#FFC65D">
+            <a-animation attribute="rotation" from="-175 0 0" to="0 0 0" dur="1000" begin="250" fill="both"></a-animation>
+
+            <a-cube position="0 -1 0" width="6" height="1" depth=".05" translate="0 -0.5 0" color="#7BC8A4">
+              <a-animation attribute="rotation" from="-180 0 0" to="0 0 0" dur="1000" begin="500" fill="both"></a-animation>
+
+                <a-cube position="0 -1 0" width="6" height="1" depth=".05" translate="0 -0.5 0" color="#4CC3D9">
+                  <a-animation attribute="rotation" from="-180 0 0" to="0 0 0" dur="1000" begin="750" fill="both"></a-animation>
+
+                  <a-cube position="0 -1 0" width="6" height="1" depth=".05" translate="0 -0.5 0" color="#93648D">
+                    <a-animation attribute="rotation" from="-180 0 0" to="0 0 0" dur="1000" begin="1000" fill="both"></a-animation>
+
+                  </a-cube>
+                </a-cube>
+            </a-cube>
+          </a-cube>
+        </a-cube>
+
+      </a-entity>
+
+    </a-scene>
+
+
+</body>
+</html>
